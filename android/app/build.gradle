@@ -23,6 +23,7 @@ if (flutterVersionName == null) {
 }
 
 android {
+    compileSdkVersion 33
     namespace "com.example.foodly"
     compileSdk flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
@@ -49,7 +50,7 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-        minSdkVersion 20 
+        minSdkVersion flutter.minSdkVersion 
     }
 
     buildTypes {
@@ -65,4 +66,6 @@ flutter {
     source '../..'
 }
 
-dependencies {}
+dependencies {
+    implementation 'com.android.support:multidex:2.0.1'
+}

@@ -26,9 +26,10 @@ class MyApp extends StatelessWidget {
               scaffoldBackgroundColor: kOffWhite,
               iconTheme: const IconThemeData(color: kDark),
               primarySwatch: Colors.grey),
-          home: HomeScreen(),
+          home: const EntryPoint(),
         );
       },
     );
   }
 }
+ 

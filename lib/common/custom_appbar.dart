@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodly/constants/constants.dart';
 
@@ -58,13 +57,25 @@ class CustomAppBar extends StatelessWidget {
                 ),
               ],
             ),
-            const Text(
-              '❄️',
-              style: TextStyle(fontSize: 35),
+            Text(
+              getTimeOfDay(),
+              style: const TextStyle(fontSize: 30),
             ),
           ],
         ),
       ),
     );
+  }
+}
+
+String getTimeOfDay() {
+  DateTime now = DateTime.now();
+  int hour = now.hour;
+  if (hour >= 0 && hour < 12) {
+    return ' ⛅ ';
+  } else if (hour >= 12 && hour < 16) {
+    return ' ⛅ ';
+  } else {
+    return ' 🌙 ';
   }
 }

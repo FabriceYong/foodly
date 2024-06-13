@@ -37,6 +37,9 @@ dependencies:
   firebase_auth: ^4.19.2
   firebase_core: ^2.30.0
   country_picker: ^2.0.25
+  logger: ^2.3.0
+  gap: ^3.0.1
+  google_fonts: ^6.2.1
 
 
 dev_dependencies:
